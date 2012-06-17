@@ -10,8 +10,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.widget.Button;
 
 /**
- * @author sasaki
- * 
+ * @author Takashi SASAKI
  */
 public class UsersActivityTestCase extends
 		ActivityInstrumentationTestCase2<com.gmail.matsushige.UsersActivity> {
@@ -33,6 +32,7 @@ public class UsersActivityTestCase extends
 			@Override
 			public void run() {
 				UsersActivityTestCase.this.buttonResetUsers.requestFocus();
+				getInstrumentation().waitForIdle(null);
 			}
 		});
 
@@ -55,4 +55,5 @@ public class UsersActivityTestCase extends
 		// TODO Auto-generated method stub
 		super.tearDown();
 	}
-}
+}// UsersActivityTestCase
+
