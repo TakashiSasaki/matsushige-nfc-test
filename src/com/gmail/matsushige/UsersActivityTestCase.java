@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.gmail.matsushige;
 
 import com.gmail.matsushige.R;
@@ -19,12 +16,16 @@ public class UsersActivityTestCase extends
 			Class<com.gmail.matsushige.UsersActivity> activityClass) {
 		super(pkg, activityClass);
 		// TODO Auto-generated constructor stub
-	}
+	}// UsersActivityTestCase
 
 	public UsersActivityTestCase() {
 		super("com.gmail.matsushige.UsersActivity",
 				com.gmail.matsushige.UsersActivity.class);
-	}
+	}// UsersActivityTestCase
+
+	public UsersActivityTestCase(Class<UsersActivity> activityClass) {
+		super(activityClass);
+	}// UsersActivityTestCase
 
 	public void test1() {
 		this.usersActivity.runOnUiThread(new Runnable() {
@@ -34,9 +35,9 @@ public class UsersActivityTestCase extends
 				UsersActivityTestCase.this.buttonResetUsers.requestFocus();
 				getInstrumentation().waitForIdle(null);
 			}
-		});
+		});// runOnUiThread
 
-	}
+	}// test1
 
 	Activity usersActivity;
 	Button buttonResetUsers;
@@ -48,12 +49,12 @@ public class UsersActivityTestCase extends
 		this.buttonResetUsers = (Button) this.usersActivity
 				.findViewById(R.id.buttonResetUsers);
 		super.setUp();
-	}
+	}// setUp
 
 	@Override
 	protected void tearDown() throws Exception {
 		// TODO Auto-generated method stub
 		super.tearDown();
-	}
+	}// tearDown
 }// UsersActivityTestCase
 
