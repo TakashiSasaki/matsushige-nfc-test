@@ -12,19 +12,8 @@ import android.widget.Button;
 public class UsersActivityTestCase extends
 		ActivityInstrumentationTestCase2<com.gmail.matsushige.UsersActivity> {
 
-	public UsersActivityTestCase(String pkg,
-			Class<com.gmail.matsushige.UsersActivity> activityClass) {
-		super(pkg, activityClass);
-		// TODO Auto-generated constructor stub
-	}// UsersActivityTestCase
-
 	public UsersActivityTestCase() {
-		super("com.gmail.matsushige.UsersActivity",
-				com.gmail.matsushige.UsersActivity.class);
-	}// UsersActivityTestCase
-
-	public UsersActivityTestCase(Class<UsersActivity> activityClass) {
-		super(activityClass);
+		super(UsersActivity.class);
 	}// UsersActivityTestCase
 
 	public void test1() {
@@ -46,8 +35,8 @@ public class UsersActivityTestCase extends
 	protected void setUp() throws Exception {
 		// TODO Auto-generated method stub
 		this.usersActivity = getActivity();
-		this.buttonResetUsers = (Button) this.usersActivity
-				.findViewById(R.id.buttonResetUsers);
+		//this.buttonResetUsers = (Button) this.usersActivity
+		//		.findViewById(R.id.buttonResetUsers);
 		super.setUp();
 	}// setUp
 
